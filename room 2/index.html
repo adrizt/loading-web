@@ -1,1 +1,97 @@
 
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Loading...</title>  <!-- ================== OPEN GRAPH ================== -->  <meta property="og:title" content="🔴Unboxing The Content...">
+  <meta property="og:description" content="See You 😘 • 1.579.093 Online Members">  <!-- 🔥 GANTI LINK GAMBAR DI BAWAH INI -->  <meta property="og:image" content="https://i.imgur.com/QVIfPvW.jpeg">  <!-- 🔥 GANTI DOMAIN KAMU -->  <meta property="og:url" content="https://loading-web.vercel.app/">  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">  <!-- ================================================= -->  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      font-family: Arial, sans-serif;
+      color: #e2e8f0;
+    }
+
+    .box {
+      text-align: center;
+      width: 280px;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+
+    .progress-container {
+      width: 100%;
+      height: 6px;
+      background: #334155;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 20px;
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #38bdf8, #6366f1);
+      transition: width 0.2s ease;
+    }
+
+    .text {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #94a3b8;
+    }
+  </style></head><body>  <div class="box">
+    <h2>Loading...</h2><div class="progress-container">
+  <div class="progress-bar" id="bar"></div>
+</div>
+
+<div class="text" id="text">Loading Content</div>
+
+  </div>  <script>
+    let progress = 0;
+    const bar = document.getElementById("bar");
+    const text = document.getElementById("text");
+
+    const messages = [
+      "Connecting...",
+      "Load data...",
+      "Preparing Image...",
+      "Almost Done..."
+    ];
+
+    let i = 0;
+
+    const interval = setInterval(() => {
+      progress += Math.random() * 20;
+
+      if (progress >= 100) {
+        progress = 100;
+        bar.style.width = progress + "%";
+        text.innerText = "Done";
+
+        clearInterval(interval);
+
+        // 🔥 GANTI LINK SMARTLINK DI SINI
+        setTimeout(() => {
+          window.location.href = "https://fdeddg.hubss.one/p/nhVNy";
+        }, 800);
+
+      } else {
+        bar.style.width = progress + "%";
+
+        if (i < messages.length && progress > (i+1)*25) {
+          text.innerText = messages[i];
+          i++;
+        }
+      }
+
+    }, 300);
+  </script></body>
+</html>
